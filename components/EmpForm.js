@@ -12,6 +12,7 @@ class EmpForm extends Component {
 			addressInput: ''
 		};
 
+
 		this.handleChange = this.handleChange.bind(this);
 	}
 
@@ -60,27 +61,25 @@ class EmpForm extends Component {
 		this.props.handleSubmitAction(contact)
 	}
 
+
 	render() {
 		return (		
 			<div className="well">
 				<h3>{this.props.title}</h3>
 				<form onSubmit={this.handleSubmit.bind(this)}>
-					<EmpInput 
-						placeholder="Add Name..." 
-						value={this.state.nameInput ? this.state.nameInput : ''}							
-						id="name" 
-						handleChange={this.handleChange}/>				
-					<EmpInput 
-						placeholder="Add Phone..." 	
-						value={this.state.phoneInput ? this.state.phoneInput : ''}						
-						id="phone" 
-						handleChange={this.handleChange}/>
-					<EmpInput
-						placeholder="Add Address..." 	
-						value={this.state.addressInput ? this.state.addressInput : ''}						
-						id="address" 
-						handleChange={this.handleChange}/>
+					
+					<div className="form-group">
+					<label className="control-label"/>
+					<input 
+						defaultValue={this.state.nameInput}
+						type="text"
+						name="username"
+						className="form-control"
+					/>
+
+					
 					<button type="submit" className="btn btn-primary">{this.props.buttonText}</button>
+					</div>
 				</form>
 			</div>
 		);
