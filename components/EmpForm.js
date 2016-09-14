@@ -12,6 +12,7 @@ class EmpForm extends Component {
 			addressInput: ''
 		};
 
+
 		this.handleChange = this.handleChange.bind(this);
 	}
 
@@ -70,7 +71,7 @@ class EmpForm extends Component {
 					<div className="form-group">
 					<label className="control-label"/>
 					<input 
-						defaultValue={this.state,nameInput}
+						defaultValue={this.state.nameInput}
 						type="text"
 						name="username"
 						className="form-control"
